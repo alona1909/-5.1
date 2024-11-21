@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Positioning Task</title>
+    <style>
+	/* Контейнер с flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.box-static {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+/* Относительное позиционирование */
+.box-relative-1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 10px;
+}
+
+.box-relative-2 {
+    position: relative;
+    bottom: 100px;
+    left: 50px;
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    margin: 10px;
+}
+
+/* Контейнер для абсолютного позиционирования */
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+/* Абсолютное позиционирование */
+.box-absolute-1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 102, 0);
+}
+
+.box-absolute-2 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+.box-absolute-3 {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+}
+
+/* Z-индекс для перекрывающихся элементов */
+.box-zindex-1 {
+    position: absolute;
+    z-index: 5;
+    top: 100px;
+    left: 400px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(234, 50, 96);
+    
+    margin: 10px;
+}
+
+.box-zindex-2 {
+    position: absolute;
+   z-index: 4; 
+   top: 150px;
+    left: 500px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(7, 161, 112);
+    
+    margin: 10px;
+}
+
+/* Фиксированное позиционирование */
+.box-fixed-1 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.box-fixed-2 {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Static positioned boxes -->
+    <div class="box-static">Static</div>
+    <div class="box-static">Static</div>
+
+    <!-- Relative positioned boxes -->
+    <div class="box-relative-1">Relative 1</div>
+    <div class="box-relative-2">Relative 2</div>
+
+    <!-- Container with absolute positioned boxes inside -->
+    <div class="container">
+        <div class="box-absolute-1">Absolute 1</div>
+        <div class="box-absolute-2">Absolute 2</div>
+        <div class="box-absolute-3">Absolute 3</div>
+    </div>
+
+    <!-- Overlapping boxes with z-index outside container -->
+    <div class="box-zindex-1">Z-Index 5</div>
+    <div class="box-zindex-2">Z-Index 4</div>
+
+    <!-- Fixed positioned boxes -->
+    <div class="box-fixed-1">Fixed Top-Right</div>
+    <div class="box-fixed-2">Fixed Bottom-Left</div>
+
+</body>
+</html>
